@@ -1,0 +1,27 @@
+name: GitHub Actions
+
+on: [push]
+
+jobs:
+  github-workflow-directory:
+    name: "print work directory"
+    runs-on: ubuntu-latest
+    steps:
+      - name: display directory
+        run: |
+            pwd
+            ls
+
+  hello-github-action:
+    name: "hello action"
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet action
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: greet-output
+        run: echo "Action time {{ steps.greet.outputs.time }}"    
+              
+    
