@@ -1,0 +1,15 @@
+name: Simple Workflow
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: echo string
+        run: echo "Hello"
+      - name: check node version
+        run: |
+            node -v
+            npm -v
+
