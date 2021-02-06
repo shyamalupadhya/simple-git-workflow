@@ -11,6 +11,12 @@ jobs:
         run: |
             pwd
             ls
+      - name: checkout action
+        uses: actions/checkout@v2.3.4
+      - name: display directory after checkout
+        run: |
+            pwd
+            ls        
 
   hello-github-action:
     name: "hello action"
