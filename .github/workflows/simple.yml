@@ -12,4 +12,18 @@ jobs:
         run: |
             node -v
             npm -v
+      - name: check python script 
+        run: |
+            import platform
+            print(platform.processor())
+        shell: python
+
+  window-shell-command:
+    runs-on: windows-latest
+    steps:
+      - name: Default Shell (PowerShell)
+        run: Get-Location
+      - name: Bash Shell
+        run: pwd
+        shell: bash              
 
