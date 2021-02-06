@@ -9,10 +9,10 @@ jobs:
     steps:
       - name: environment variables
         run: |
-            echo ${{ GITHUB_REPOSITORY }}
-            echo "${{ GITHUB_WORKSPACE }}"
-            echo "${{ GITHUB_SHA }}"
-            echo "${{ github.token }}"
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
+            echo $GITHUB_SHA
+            echo ${{ github.token }}"
   github-workflow-directory:
     name: "print work directory"
     runs-on: ubuntu-latest
