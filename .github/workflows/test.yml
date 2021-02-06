@@ -12,7 +12,7 @@ jobs:
             echo $GITHUB_REPOSITORY
             echo $GITHUB_WORKSPACE
             echo $GITHUB_SHA
-            echo ${{ github.token }}"
+            echo "${{ github.token }}"
   github-workflow-directory:
     name: "print work directory"
     runs-on: ubuntu-latest
