@@ -20,6 +20,7 @@ jobs:
 
   window-shell-command:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: Default Shell (PowerShell)
         run: Get-Location
