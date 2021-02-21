@@ -12,6 +12,8 @@ jobs:
         run: |
             node -v
             npm -v
+            python --version
+            which android            
       - name: check python script 
         run: |
             import platform
